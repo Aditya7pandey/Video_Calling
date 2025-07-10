@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io("/", { transports: ["websocket"] });
+const socket = io(process.env.REACT_APP_SERVER_URL);
 
 function App() {
     const localVideoRef = useRef(null);
